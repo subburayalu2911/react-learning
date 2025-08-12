@@ -1,0 +1,82 @@
+/* Layout container */
+.app-container {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Sidebar styles */
+.sidebar {
+  background-color: #1e1e2f;
+  color: white;
+  width: 240px;
+  transition: width 0.3s ease;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sidebar.collapsed {
+  width: 60px;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  white-space: nowrap;
+}
+
+/* Toggle button */
+.toggle-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.4rem;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* Nav links */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+}
+
+.sidebar ul li button {
+  background: none;
+  border: none;
+  color: white;
+  text-align: left;
+  width: 100%;
+  font-size: 1rem;
+  padding: 8px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.sidebar ul li button:hover {
+  background-color: #2e2e42;
+}
+
+/* Content area */
+.content {
+  flex: 1;
+  background-color: #ffffff; /* Bright white for contrast */
+  color: #222;               /* Dark text for readability */
+  padding: 30px;
+  overflow-y: auto;
+  /* min-height: 100vh;         Always fill screen height */
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.05); /* subtle inner shadow */
+}
