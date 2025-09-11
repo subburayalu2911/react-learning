@@ -7,8 +7,8 @@
 
 /* Sidebar styles */
 .sidebar {
-  background-color: #1e1e2f;
-  color: white;
+  background-color: #000;
+  color: #fff;
   width: 240px;
   transition: width 0.3s ease;
   padding: 10px;
@@ -20,6 +20,13 @@
 
 .sidebar.collapsed {
   width: 60px;
+}
+
+.sidebar-container {
+  background-color: #000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Logo */
@@ -68,6 +75,11 @@
 
 .sidebar ul li button:hover {
   background-color: #2e2e42;
+}
+
+.sidebar-link-active {
+  background-color: #1976d2 !important;
+  color: #fff !important;
 }
 
 /* Content area */

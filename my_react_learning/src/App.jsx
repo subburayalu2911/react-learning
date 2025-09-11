@@ -3,13 +3,15 @@ import Navbar from "./Navbar/Navbar";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
-
+import Form from "./Pages/Form";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const getInitialPage = () => {
     const path = window.location.pathname;
     if (path === "/about") return "about";
     if (path === "/contact") return "contact";
+    if (path === "/form") return "form";
     return "home";
   };
 
@@ -38,6 +40,8 @@ function App() {
         return <About />;
       case "contact":
         return <Contact />;
+      case "form":
+        return <Form />;
       default:
         return <Home />;
     }
