@@ -7,3 +7,25 @@
   background: #f9f9f9;
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
 }
+
+.col-md-6 {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.col-md-6.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.shadow-sm {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.shadow-sm.show {
+  opacity: 1;
+  transform: translateY(0);
+}
