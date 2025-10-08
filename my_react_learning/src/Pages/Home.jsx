@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Page.css';
 
@@ -22,9 +22,15 @@ function Home() {
     setDraggedIndex(null);
   };
 
+  const [show, setShow] = useState(false);
+  
+  useEffect(() => {
+      setShow(true);
+    }, []);
+
   return (
     <div className="w-100 min-vh-100 bg-white">
-      <div className="shadow-sm p-4">
+      <div className={`shadow-sm${show ? " show" : ""} p-4`}>
         <h2 className="text mb-3 fw-bold">Welcome to My React Learning Journey</h2>
         <p>
           Learning React is an exciting adventure! React helps you build dynamic,
